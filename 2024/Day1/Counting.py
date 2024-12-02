@@ -20,4 +20,4 @@ print(count) # part 1
 count1 = 0
 for i in list1:
     count1 += i*Counter(list2)[i]
-print(count1)
+print(count1) # part 2
