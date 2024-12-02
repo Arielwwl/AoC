@@ -1,2 +1,2 @@
-# AoC2024
- Attempt at Advent of Code 2024
+# Advent of Code
+My attempts at AoC!
