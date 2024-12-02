@@ -1,3 +1,5 @@
+from collections import Counter
+
 list1, list2 = [], []
 
 with open("input.txt", "r") as file:
@@ -13,4 +15,9 @@ list2.sort()
 count = 0
 for x, y in zip(list1, list2):
     count += abs(x-y)
-print(count)
+print(count) # part 1
+
+count1 = 0
+for i in list1:
+    count1 += i*Counter(list2)[i]
+print(count1)
