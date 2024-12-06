@@ -49,4 +49,4 @@ def crosscheck(data, word):
                 
     return count
 
-crosscheck(data, "MAS")
+crosscheck(data, "MAS") # part 2
