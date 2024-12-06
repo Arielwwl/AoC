@@ -33,3 +33,20 @@ def conditions(data, word):
     return count 
                 
 conditions(data, "XMAS") # part 1
+
+def crosscheck(data, word):
+    rows = len(data)
+    cols = len(data[0])
+    count = 0
+
+    for x in range(1, rows-1):
+        for y in range(1, cols-1):
+            if data[x][y] == word[1]: # check middle letter
+                word1 = data[x+1][y+1] + data[x][y] + data[x-1][y-1] # check what word is from top left to bot right
+                word2 = data[x+1][y-1] + data[x][y] + data[x-1][y+1] # check what word is from bot left to top right
+                if word1 in (word, word[::-1]) and word2 in (word, word[::-1]):
+                    count += 1
+                
+    return count
+
+crosscheck(data, "MAS")
